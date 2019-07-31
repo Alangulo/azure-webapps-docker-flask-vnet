@@ -19,7 +19,6 @@ COPY init.sh /usr/local/bin/
 RUN chmod u+x /usr/local/bin/init.sh
 
 ENV FLASK_ENV="docker"
-EXPOSE 8080 2222
-ENV PORT 8080
+ENV SSH_PORT 2222
 
 ENTRYPOINT ["/usr/local/bin/init.sh"]
